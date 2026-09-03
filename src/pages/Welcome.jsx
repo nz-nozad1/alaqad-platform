@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../App.css'
+import './Welcome.css'
 
 import logoImage from '../assets/nz7.png'
 import ministryImage from '../assets/Ministry.png'
@@ -43,6 +43,7 @@ function Welcome() {
       return ''
     }
 
+    // لو المستخدم بيكتب أرقام
     if (/^\d+$/.test(value)) {
       if (!/^(010|011|012|015)\d{8}$/.test(value)) {
         return isEnglish
@@ -53,6 +54,7 @@ function Welcome() {
       return ''
     }
 
+    // لو المستخدم بيكتب بريد
     if (!value.toLowerCase().endsWith('@gmail.com')) {
       return isEnglish
         ? 'This email is invalid'
@@ -73,6 +75,7 @@ function Welcome() {
     const trimmedIdentity = identity.trim()
     const trimmedPassword = password
 
+    // لا توجد بيانات
     if (!trimmedIdentity) {
       setIdentityError(
         isEnglish
@@ -83,6 +86,7 @@ function Welcome() {
       return
     }
 
+    // تحقق البريد / الرقم
     const identityValidation = validateIdentity(trimmedIdentity)
 
     if (identityValidation) {
@@ -236,25 +240,24 @@ function Welcome() {
                 </span>
               </button>
 
-              {/* =================================================
-                 القائمة الرئيسية
-                 التعديل:
-                 - بدون قفل
-                 - تفتح Home
-              ================================================= */}
+              {/* القائمة الرئيسية */}
 
               <button
                 type="button"
                 className="welcome-menu-item main-item"
                 onClick={() => {
                   setMenuOpen(false)
-                  navigate('/home')
+                  navigate('/')
                 }}
               >
                 <span>
                   {isEnglish
                     ? 'Main Menu'
                     : 'القائمة الرئيسية'}
+                </span>
+
+                <span className="menu-lock">
+                  🔒
                 </span>
               </button>
 
@@ -368,6 +371,8 @@ function Welcome() {
 
         <section className="welcome-logos-section">
 
+          {/* وزارة التربية والتعليم */}
+
           <div className="welcome-logo-box ministry">
 
             <img
@@ -386,6 +391,8 @@ function Welcome() {
             className="logos-divider"
             aria-hidden="true"
           ></div>
+
+          {/* JAX */}
 
           <div className="welcome-logo-box jax">
 
@@ -424,11 +431,9 @@ function Welcome() {
           {/* العنوان */}
 
           <h2 className="welcome-login-title">
-
             {isEnglish
               ? 'Login'
               : 'تسجيل الدخول'}
-
           </h2>
 
           {/* =================================================
@@ -450,7 +455,6 @@ function Welcome() {
               type="text"
               value={identity}
               onChange={(e) => {
-
                 const value = e.target.value
 
                 setIdentity(value)
@@ -462,7 +466,6 @@ function Welcome() {
                 if (passwordError) {
                   setPasswordError('')
                 }
-
               }}
               placeholder={
                 isEnglish
@@ -516,13 +519,11 @@ function Welcome() {
                 }
                 value={password}
                 onChange={(e) => {
-
                   setPassword(e.target.value)
 
                   if (passwordError) {
                     setPasswordError('')
                   }
-
                 }}
                 placeholder={
                   isEnglish
@@ -661,7 +662,6 @@ function Welcome() {
           ================================================= */}
 
           {showDeveloperNote && (
-
             <section className="developer-note">
 
               <img
@@ -736,7 +736,6 @@ function Welcome() {
               </div>
 
             </section>
-
           )}
 
           {/* =================================================
@@ -744,8 +743,9 @@ function Welcome() {
           ================================================= */}
 
           {showLegalNote && (
-
             <section className="legal-note">
+
+              {/* الشعارات */}
 
               <div className="legal-note-logos">
 
@@ -775,6 +775,8 @@ function Welcome() {
                 </div>
 
               </div>
+
+              {/* النص القانوني */}
 
               <div className="legal-note-text">
 
@@ -809,7 +811,6 @@ function Welcome() {
               </div>
 
             </section>
-
           )}
 
         </section>

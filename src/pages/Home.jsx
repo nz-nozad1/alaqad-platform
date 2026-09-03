@@ -22,6 +22,7 @@ function Home() {
       className={`home-page ${darkMode ? 'dark-mode' : ''}`}
       dir="rtl"
     >
+
       {/* العبارة الذهبية */}
       <div className="quote-bar">
         <span>
@@ -31,6 +32,7 @@ function Home() {
 
       {/* القائمة الجانبية */}
       <aside className={`side-menu ${menuOpen ? 'open' : ''}`}>
+
         <div className="side-menu-header">
           <h2>منصة العقاد</h2>
 
@@ -43,14 +45,19 @@ function Home() {
         </div>
 
         <div className="side-menu-items">
+
           <button>إنشاء حساب</button>
+
           <button>تسجيل دخول</button>
+
           <button>القائمة الرئيسية</button>
 
           <div className="menu-divider"></div>
 
           <button>حسابي</button>
+
         </div>
+
       </aside>
 
       {/* خلفية القائمة */}
@@ -77,6 +84,7 @@ function Home() {
 
         {/* الشعار */}
         <div className="brand">
+
           <div className="book-logo">
             <span className="book left-book"></span>
             <span className="book right-book"></span>
@@ -97,6 +105,7 @@ function Home() {
               JAX EDUCATIONAL
             </div>
           </div>
+
         </div>
 
         {/* رصيد الطالب */}
@@ -119,7 +128,7 @@ function Home() {
             تواصل معنا
           </button>
 
-          {/* Dark Mode */}
+          {/* Black Mode */}
           <button
             className="dark-mode-btn"
             onClick={() => setDarkMode(!darkMode)}
@@ -142,7 +151,6 @@ function Home() {
         <section className="welcome">
 
           <span className="welcome-label">
-
             <span className="welcome-blue">
               أهلاً بك
             </span>
@@ -162,7 +170,6 @@ function Home() {
             <span className="welcome-red">
               مركز التعليم
             </span>
-
           </span>
 
           <p className="welcome-description">
@@ -222,7 +229,6 @@ function Home() {
         <section className="admin-info">
 
           <div className="admin-item admin-manager">
-
             <span>
               مدير المدرسة:
             </span>
@@ -230,11 +236,9 @@ function Home() {
             <strong>
               صلاح جلال حبشي
             </strong>
-
           </div>
 
           <div className="admin-item admin-developer">
-
             <span>
               مطور المنصة والبوت:
             </span>
@@ -242,7 +246,6 @@ function Home() {
             <strong>
               نوذاد محمد محمود هلال
             </strong>
-
           </div>
 
         </section>
