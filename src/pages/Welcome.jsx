@@ -247,17 +247,17 @@ function Welcome() {
                 className="welcome-menu-item main-item"
                 onClick={() => {
                   setMenuOpen(false)
-                  navigate('/')
+                  navigate('/home')
                 }}
               >
                 <span>
                   {isEnglish
-                    ? 'Main Menu'
-                    : 'القائمة الرئيسية'}
+                    ? 'Home'
+                    : 'الصفحة الرئيسية'}
                 </span>
 
-                <span className="menu-lock">
-                  🔒
+                <span className="menu-item-arrow">
+                  →
                 </span>
               </button>
 
