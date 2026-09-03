@@ -66,11 +66,9 @@ function Home() {
   const [darkMode, setDarkMode] = useState(false)
   const [selectedCard, setSelectedCard] = useState(null)
 
-  const [showDeveloperSignature, setShowDeveloperSignature] =
-    useState(false)
-
+  // الإضافات المطلوبة
+  const [showDeveloperSignature, setShowDeveloperSignature] = useState(false)
   const [showLegalNote, setShowLegalNote] = useState(false)
-
   const [english, setEnglish] = useState(false)
 
   const currentCards = english ? englishCards : cards
@@ -92,9 +90,7 @@ function Home() {
 
       {/* القائمة الجانبية */}
       <aside className={`side-menu ${menuOpen ? 'open' : ''}`}>
-
         <div className="side-menu-header">
-
           <h2>
             {english ? 'Al-Akkad Platform' : 'منصة العقاد'}
           </h2>
@@ -105,7 +101,6 @@ function Home() {
           >
             ×
           </button>
-
         </div>
 
         <div className="side-menu-items">
@@ -129,7 +124,6 @@ function Home() {
           </button>
 
         </div>
-
       </aside>
 
       {/* خلفية القائمة */}
@@ -166,7 +160,6 @@ function Home() {
           </div>
 
           <div>
-
             <div className="brand-title">
               {english ? 'Al-Akkad Platform' : 'منصة العقاد'}
             </div>
@@ -174,7 +167,6 @@ function Home() {
             <div className="brand-subtitle">
               JAX EDUCATIONAL
             </div>
-
           </div>
 
         </div>
@@ -229,10 +221,9 @@ function Home() {
 
       </header>
 
-      {/* المحتوى الرئيسي */}
+      {/* الترحيب */}
       <main>
 
-        {/* الترحيب */}
         <section className="welcome">
 
           <span className="welcome-label">
@@ -245,6 +236,7 @@ function Home() {
               {' '}
             </span>
 
+            {/* تم تغيير كلمة "في" إلى الأزرق */}
             <span className="welcome-blue">
               {english ? 'to' : 'في'}
             </span>
@@ -254,9 +246,7 @@ function Home() {
             </span>
 
             <span className="welcome-red">
-              {english
-                ? 'Education Center'
-                : 'مركز التعليم'}
+              {english ? 'Education Center' : 'مركز التعليم'}
             </span>
 
           </span>
@@ -322,9 +312,7 @@ function Home() {
           <div className="admin-item admin-manager">
 
             <span>
-              {english
-                ? 'School Manager:'
-                : 'مدير المدرسة:'}
+              {english ? 'School Manager:' : 'مدير المدرسة:'}
             </span>
 
             <strong>
@@ -341,12 +329,11 @@ function Home() {
                 : 'مطور المنصة والبوت:'}
             </span>
 
+            {/* اسم المطور أصبح زر */}
             <button
               className="developer-name"
               onClick={() =>
-                setShowDeveloperSignature(
-                  !showDeveloperSignature
-                )
+                setShowDeveloperSignature(!showDeveloperSignature)
               }
             >
               نوذاد محمد محمود هلال
@@ -365,26 +352,21 @@ function Home() {
           <section className="developer-note">
 
             <div className="developer-note-logo-wrapper">
-
               <img
                 src="/nz7.png"
                 alt="NZ7"
                 className="developer-note-logo"
               />
-
             </div>
 
             <h3>
-              🇪🇬{' '}
-              {english
-                ? 'Pride Signature'
-                : 'بصمة فخر'}
+              🇪🇬 {english ? 'Pride Signature' : 'بصمة فخر'}
             </h3>
 
             <div className="developer-quote">
 
               {english
-                ? '“Not merely lines of code… but work I built with an idea, developed with knowledge, and completed with effort.”'
+                ? '«Not merely lines of code… but work I built with an idea, developed with knowledge, and completed with effort.»'
                 : '«ليست مجرد أسطر في كود… بل عملٌ بنيته بفكرة، وطورته بعلم، وأكملته بجهد.»'}
 
             </div>
@@ -392,143 +374,114 @@ function Home() {
             <div className="developer-note-text">
 
               {english ? (
-
                 <>
                   <p>
-                    I,{' '}
+                    I, <strong>Nouzad Mohamed Mahmoud Helal</strong>,
+                    take pride in having built and developed this platform
+                    and its associated bot programmatically, starting from
+                    the idea and implementation until reaching the form
+                    in which the project appears today.
+                  </p>
+
+                  <p>
+                    My goal in this work was not to own what I built.
+                    The ownership of the project belongs entirely to the
                     <strong>
-                      Nouzad Mohamed Mahmoud Helal
-                    </strong>
-                    , take pride in having built and
-                    developed this platform and its
-                    associated bot programmatically,
-                    starting from the idea and
-                    implementation until reaching the
-                    form in which the project appears
-                    today.
+                      {' '}Ministry of Education and Technical Education
+                    </strong>.
+                    My goal was to use my programming knowledge and
+                    experience to build a project that serves education
+                    and leaves a real impact.
                   </p>
 
                   <p>
-                    My goal in this work was not to own
-                    what I built. The ownership of the
-                    project belongs entirely to the{' '}
-                    <strong>
-                      Ministry of Education and
-                      Technical Education
-                    </strong>
-                    . My goal was to use my programming
-                    knowledge and experience to build a
-                    project that serves education and
-                    leaves a real impact.
+                    I place my name here not as the owner, but as the
+                    programmer who wrote, built, and developed this work,
+                    leaving within it a part of his knowledge, time,
+                    and effort.
                   </p>
 
                   <p>
-                    I place my name here not as the owner,
-                    but as the programmer who wrote,
-                    built, and developed this work,
-                    leaving within it a part of his
-                    knowledge, time, and effort.
+                    The platform is owned by the Ministry at
+                    <strong> 100%</strong>,
+                    while the programming and development in this project
+                    are my signature.
                   </p>
 
                   <p>
-                    The platform is owned by the Ministry
-                    at <strong>100%</strong>, while the
-                    programming and development in this
-                    project are my signature.
+                    This project carries the essence of my knowledge,
+                    thoughts, and effort. Contributing to the development
+                    of an educational platform that helps build a more
+                    knowledgeable and capable generation is an honor I
+                    take pride in and a responsibility whose value I
+                    believe in.
                   </p>
 
                   <p>
-                    This project carries the essence of
-                    my knowledge, thoughts, and effort.
-                    Contributing to the development of an
-                    educational platform that helps build
-                    a more knowledgeable and capable
-                    generation is an honor I take pride
-                    in and a responsibility whose value
-                    I believe in.
+                    I am proud that this work is part of my journey as a
+                    programmer, and that it represents one of the results
+                    of what I have learned and dedicated to serving a
+                    project connected to education and the future of
+                    the children of my country.
                   </p>
 
                   <p>
-                    I am proud that this work is part of
-                    my journey as a programmer, and that
-                    it represents one of the results of
-                    what I have learned and dedicated to
-                    serving a project connected to
-                    education and the future of the
-                    children of my country.
-                  </p>
-
-                  <p>
-                    This is my signature… and this is my
-                    pride.
+                    This is my signature… and this is my pride.
                     <br />
-                    If I am to leave an impact, let it be
-                    an impact that benefits my country
-                    and contributes to its progress.
+                    If I am to leave an impact, let it be an impact that
+                    benefits my country and contributes to its progress.
                   </p>
                 </>
-
               ) : (
-
                 <>
                   <p>
-                    أعتزّ أنا{' '}
-                    <strong>
-                      نوذاد محمد محمود هلال
-                    </strong>{' '}
-                    بأنني تولّيت بناء وتطوير هذه المنصة
-                    والبوت المرتبط بها برمجيًا، بدايةً من
-                    الفكرة والتنفيذ، وصولًا إلى الصورة
+                    أعتزّ أنا <strong>نوذاد محمد محمود هلال</strong> بأنني
+                    تولّيت بناء وتطوير هذه المنصة والبوت المرتبط بها
+                    برمجيًا، بدايةً من الفكرة والتنفيذ، وصولًا إلى الصورة
                     التي يظهر بها المشروع اليوم.
                   </p>
 
                   <p>
-                    لم يكن هدفي من هذا العمل أن أمتلك ما
-                    بنيته، فملكية المشروع تعود كاملةً إلى{' '}
+                    لم يكن هدفي من هذا العمل أن أمتلك ما بنيته، فملكية
+                    المشروع تعود كاملةً إلى
                     <strong>
-                      وزارة التربية والتعليم والتعليم الفني
-                    </strong>
-                    ، وإنما كان هدفي أن أُسخّر ما أمتلكه
-                    من معرفة وخبرة برمجية في بناء مشروع
-                    يخدم التعليم ويترك أثرًا حقيقيًا.
+                      {' '}وزارة التربية والتعليم والتعليم الفني
+                    </strong>،
+                    وإنما كان هدفي أن أُسخّر ما أمتلكه من معرفة وخبرة
+                    برمجية في بناء مشروع يخدم التعليم ويترك أثرًا حقيقيًا.
                   </p>
 
                   <p>
-                    أضع اسمي هنا لا باعتباره اسم المالك،
-                    وإنما باعتباره اسم المبرمج الذي كتب
-                    وبنى وطوّر هذا العمل، وترك فيه جزءًا
-                    من علمه ووقته وجهده.
+                    أضع اسمي هنا لا باعتباره اسم المالك، وإنما باعتباره
+                    اسم المبرمج الذي كتب وبنى وطوّر هذا العمل، وترك فيه
+                    جزءًا من علمه ووقته وجهده.
                   </p>
 
                   <p>
-                    فالمنصة ملكٌ للوزارة بنسبة{' '}
-                    <strong>100%</strong>، والبرمجة
-                    والتطوير في هذا المشروع هي بصمتي.
+                    فالمنصة ملكٌ للوزارة بنسبة
+                    <strong> 100%</strong>،
+                    والبرمجة والتطوير في هذا المشروع هي بصمتي.
                   </p>
 
                   <p>
-                    يحمل هذا المشروع خلاصة علمي، وفكري،
-                    وجهدي؛ فأن أُسهم في تطوير منصة تخدم
-                    التعليم وتُسهم في بناء جيلٍ أكثر علمًا
-                    وقدرة، هو شرف أعتز به ومسؤولية أؤمن
-                    بقيمتها.
+                    يحمل هذا المشروع خلاصة علمي، وفكري، وجهدي؛ فأن أُسهم
+                    في تطوير منصة تخدم التعليم وتُسهم في بناء جيلٍ أكثر
+                    علمًا وقدرة، هو شرف أعتز به ومسؤولية أؤمن بقيمتها.
                   </p>
 
                   <p>
-                    وأعتز بأن يكون هذا العمل جزءًا من
-                    مسيرتي كمبرمج، وأن تكون إحدى ثمار ما
-                    تعلمته وسخّرته في خدمة مشروع يرتبط
-                    بالتعليم وبمستقبل أبناء وطني.
+                    وأعتز بأن يكون هذا العمل جزءًا من مسيرتي كمبرمج،
+                    وأن تكون إحدى ثمار ما تعلمته وسخّرته في خدمة مشروع
+                    يرتبط بالتعليم وبمستقبل أبناء وطني.
                   </p>
 
                   <p>
                     هذه بصمتي… وهذا فخري.
                     <br />
-                    وإن كان لي أن أترك أثرًا، فليكن أثرًا
-                    ينفع بلدي ويُضاف إلى مسيرة بنائه.
+                    وإن كان لي أن أترك أثرًا، فليكن أثرًا ينفع بلدي
+                    ويُضاف إلى مسيرة بنائه.
                   </p>
                 </>
-
               )}
 
               <p className="developer-hashtags">
@@ -557,9 +510,7 @@ function Home() {
 
           <button
             className="legal-footer-button"
-            onClick={() =>
-              setShowLegalNote(!showLegalNote)
-            }
+            onClick={() => setShowLegalNote(!showLegalNote)}
           >
             {english
               ? 'All Rights Reserved © 2026–2027 Al-Akkad Platform'
@@ -582,38 +533,29 @@ function Home() {
               </h3>
 
               {english ? (
-
                 <>
                   <p>
-                    This educational platform and its
-                    associated bot are the exclusive and
-                    complete property, 100%, of the
-                    Ministry of Education and Technical
-                    Education.
+                    This educational platform and its associated bot are
+                    the exclusive and complete property, 100%, of the
+                    Ministry of Education and Technical Education.
                   </p>
 
                   <p>
-                    All intellectual, administrative, and
-                    operational property rights related to
-                    the platform, its components, and
-                    systems belong to the Ministry of
-                    Education and Technical Education.
-                    The programming or technical
-                    contribution of any individual does
-                    not create any ownership right over
-                    the platform, its brand, content, or
-                    systems.
+                    All intellectual, administrative, and operational
+                    property rights related to the platform, its components,
+                    and systems belong to the Ministry of Education and
+                    Technical Education. The programming or technical
+                    contribution of any individual does not create any
+                    ownership right over the platform, its brand, content,
+                    or systems.
                   </p>
 
                   <p>
-                    Any copying, reproduction,
-                    modification, redistribution, or use
-                    of the platform, bot, or any of its
-                    components outside the authorized
-                    framework constitutes a violation of
-                    the rights and regulations governing
-                    the use of the project and is subject
-                    to legal accountability under
+                    Any copying, reproduction, modification, redistribution,
+                    or use of the platform, bot, or any of its components
+                    outside the authorized framework constitutes a violation
+                    of the rights and regulations governing the use of the
+                    project and is subject to legal accountability under
                     applicable laws and regulations.
                   </p>
 
@@ -629,42 +571,34 @@ function Home() {
                   </p>
 
                   <p>
-                    His contribution to this project is
-                    limited to programming, development,
-                    and technical implementation, without
-                    creating any claim of ownership over
-                    the platform, bot, or their rights.
+                    His contribution to this project is limited to
+                    programming, development, and technical implementation,
+                    without creating any claim of ownership over the
+                    platform, bot, or their rights.
                   </p>
                 </>
-
               ) : (
-
                 <>
                   <p>
-                    تُعد هذه المنصة التعليمية والبوت
-                    التابع لها ملكية حصرية وكاملة بنسبة{' '}
-                    <strong>100%</strong> لوزارة التربية
+                    تُعد هذه المنصة التعليمية والبوت التابع لها ملكية
+                    حصرية وكاملة بنسبة <strong>100%</strong> لوزارة التربية
                     والتعليم والتعليم الفني.
                   </p>
 
                   <p>
-                    وتعود جميع حقوق الملكية الفكرية
-                    والإدارية والتشغيلية المتعلقة بالمنصة
-                    ومكوناتها وأنظمتها إلى وزارة التربية
-                    والتعليم والتعليم الفني، ولا يترتب
-                    على المساهمة البرمجية أو التقنية لأي
-                    فرد أي حق في ملكية المنصة أو علامتها
-                    أو محتواها أو أنظمتها.
+                    وتعود جميع حقوق الملكية الفكرية والإدارية والتشغيلية
+                    المتعلقة بالمنصة ومكوناتها وأنظمتها إلى وزارة التربية
+                    والتعليم والتعليم الفني، ولا يترتب على المساهمة
+                    البرمجية أو التقنية لأي فرد أي حق في ملكية المنصة
+                    أو علامتها أو محتواها أو أنظمتها.
                   </p>
 
                   <p>
-                    ويُعد أي نسخ أو إعادة إنتاج أو تعديل
-                    أو إعادة توزيع أو استخدام للمنصة أو
-                    البوت أو أي من مكوناته خارج الإطار
-                    المصرح به، مخالفةً للحقوق والضوابط
-                    المنظمة لاستخدام المشروع، ويخضع
-                    للمساءلة وفقًا للقوانين واللوائح
-                    المعمول بها.
+                    ويُعد أي نسخ أو إعادة إنتاج أو تعديل أو إعادة توزيع
+                    أو استخدام للمنصة أو البوت أو أي من مكوناته خارج
+                    الإطار المصرح به، مخالفةً للحقوق والضوابط المنظمة
+                    لاستخدام المشروع، ويخضع للمساءلة وفقًا للقوانين
+                    واللوائح المعمول بها.
                   </p>
 
                   <p className="legal-contribution-title">
@@ -679,13 +613,11 @@ function Home() {
                   </p>
 
                   <p>
-                    تقتصر مساهمته في هذا المشروع على
-                    البرمجة والتطوير والتنفيذ التقني،
-                    دون أن يترتب على ذلك أي ادعاء بملكية
+                    تقتصر مساهمته في هذا المشروع على البرمجة والتطوير
+                    والتنفيذ التقني، دون أن يترتب على ذلك أي ادعاء بملكية
                     المنصة أو البوت أو حقوقهما.
                   </p>
                 </>
-
               )}
 
             </div>
