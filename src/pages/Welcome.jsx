@@ -247,17 +247,13 @@ function Welcome() {
                 className="welcome-menu-item main-item"
                 onClick={() => {
                   setMenuOpen(false)
-                  navigate('/')
+                  navigate('/home')
                 }}
               >
                 <span>
                   {isEnglish
                     ? 'Main Menu'
                     : 'القائمة الرئيسية'}
-                </span>
-
-                <span className="menu-lock">
-                  🔒
                 </span>
               </button>
 
@@ -431,9 +427,11 @@ function Welcome() {
           {/* العنوان */}
 
           <h2 className="welcome-login-title">
+
             {isEnglish
               ? 'Login'
               : 'تسجيل الدخول'}
+
           </h2>
 
           {/* =================================================
@@ -455,6 +453,7 @@ function Welcome() {
               type="text"
               value={identity}
               onChange={(e) => {
+
                 const value = e.target.value
 
                 setIdentity(value)
@@ -466,6 +465,7 @@ function Welcome() {
                 if (passwordError) {
                   setPasswordError('')
                 }
+
               }}
               placeholder={
                 isEnglish
@@ -519,11 +519,13 @@ function Welcome() {
                 }
                 value={password}
                 onChange={(e) => {
+
                   setPassword(e.target.value)
 
                   if (passwordError) {
                     setPasswordError('')
                   }
+
                 }}
                 placeholder={
                   isEnglish
@@ -662,6 +664,7 @@ function Welcome() {
           ================================================= */}
 
           {showDeveloperNote && (
+
             <section className="developer-note">
 
               <img
@@ -736,6 +739,7 @@ function Welcome() {
               </div>
 
             </section>
+
           )}
 
           {/* =================================================
@@ -743,6 +747,7 @@ function Welcome() {
           ================================================= */}
 
           {showLegalNote && (
+
             <section className="legal-note">
 
               {/* الشعارات */}
@@ -811,6 +816,7 @@ function Welcome() {
               </div>
 
             </section>
+
           )}
 
         </section>
