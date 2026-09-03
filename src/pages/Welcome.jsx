@@ -43,7 +43,6 @@ function Welcome() {
       return ''
     }
 
-    // لو المستخدم بيكتب أرقام
     if (/^\d+$/.test(value)) {
       if (!/^(010|011|012|015)\d{8}$/.test(value)) {
         return isEnglish
@@ -54,7 +53,6 @@ function Welcome() {
       return ''
     }
 
-    // لو المستخدم بيكتب بريد
     if (!value.toLowerCase().endsWith('@gmail.com')) {
       return isEnglish
         ? 'This email is invalid'
@@ -75,7 +73,6 @@ function Welcome() {
     const trimmedIdentity = identity.trim()
     const trimmedPassword = password
 
-    // لا توجد بيانات
     if (!trimmedIdentity) {
       setIdentityError(
         isEnglish
@@ -86,7 +83,6 @@ function Welcome() {
       return
     }
 
-    // تحقق البريد / الرقم
     const identityValidation = validateIdentity(trimmedIdentity)
 
     if (identityValidation) {
@@ -240,7 +236,12 @@ function Welcome() {
                 </span>
               </button>
 
-              {/* القائمة الرئيسية */}
+              {/* =================================================
+                 القائمة الرئيسية
+                 التعديل:
+                 - بدون قفل
+                 - تفتح Home
+              ================================================= */}
 
               <button
                 type="button"
@@ -367,8 +368,6 @@ function Welcome() {
 
         <section className="welcome-logos-section">
 
-          {/* وزارة التربية والتعليم */}
-
           <div className="welcome-logo-box ministry">
 
             <img
@@ -387,8 +386,6 @@ function Welcome() {
             className="logos-divider"
             aria-hidden="true"
           ></div>
-
-          {/* JAX */}
 
           <div className="welcome-logo-box jax">
 
@@ -750,8 +747,6 @@ function Welcome() {
 
             <section className="legal-note">
 
-              {/* الشعارات */}
-
               <div className="legal-note-logos">
 
                 <div className="legal-logo-box">
@@ -780,8 +775,6 @@ function Welcome() {
                 </div>
 
               </div>
-
-              {/* النص القانوني */}
 
               <div className="legal-note-text">
 
